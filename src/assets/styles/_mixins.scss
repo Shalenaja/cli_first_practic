@@ -1,0 +1,23 @@
+@mixin flex-spbt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+@mixin flex-col-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+@mixin flex-start-center {
+    display: flex;       
+    justify-content: flex-start;
+    align-items: center;
+}

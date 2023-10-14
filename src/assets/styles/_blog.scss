@@ -1,0 +1,160 @@
+
+.blog-content {
+    padding-bottom: 150px;
+    &__banner {   
+        margin-bottom: 200px;    
+        background-image: url(@/assets/img/blog_content_banner.jpg);
+        height: 358px;
+        background-size: cover;
+        position: relative;  
+
+        &_link {
+            position: absolute;
+            top: 180px;
+            margin-left: 348px;      
+            background-color: $color_Back;
+            border-top-left-radius: 37px;
+            border-top-right-radius: 37px;
+            height: 178px;
+            padding: 41px 78px;
+
+            &_title {
+                color: $colorTitle;
+                font-family: DM Serif Display;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 400;
+            }
+            & ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                color: $colorText;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.22px;
+                position: relative;
+            }
+
+            & ul::after {
+                content: '/';
+                position: absolute;
+                left: 174px;
+            }
+        }    
+    }
+
+   
+    &__title {
+        color: $colorTitle;
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;      
+        letter-spacing: 1px;
+        margin-bottom: 33px;
+    }
+
+    &__post-box {
+        padding: -20px;
+        @include flex-start-center;
+        gap: 65px;
+
+        &_img {
+            width: 568px;
+            height: 464px;
+        }
+        &_info {
+            @include flex-col-start;
+            row-gap: 42px;
+
+            &_title {
+                color: $colorTitle;
+                font-family: DM Serif Display;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                margin-bottom: 22px;
+                width: 80%;
+            }
+            &_text {
+                color: $colorText;           
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.22px;
+                width: 80%;
+            }
+            &_date {
+                width: 100%;
+                @include flex-spbt;
+
+                &_left {
+                    width: 45.6%;
+                    color: $colorText;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    letter-spacing: 0.16px;
+                    text-transform: capitalize;
+                }
+                &_button {
+                    border: 1px solid transparent;
+                    background-color: $color_Back;
+                }
+            }
+        }
+    }
+}
+
+.news-blog {
+    margin-bottom: 200px;
+    
+    &__title {
+        color: $colorTitle;
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        margin-bottom: 82px;
+        display: grid;
+        grid-template-columns: repeat(3, 31.8%);
+        gap: 2.3%;
+    }
+
+    &__scroll-page {
+        width: 22.4%;
+        height: 52px;        
+        margin-left: 464px;
+        @include flex-start-center;
+        gap: 20px;
+
+        &_button {              
+            background-color: $color_Back;
+            border-radius: 50px;
+            border: 1px solid #CDA274;
+            width: 52px;
+            height: 52px;
+
+            &:last-child {
+                border: 1px solid transparent;
+            }
+            
+            &:hover svg {
+                fill: #F4F0EC;
+            } 
+            &:hover {
+                background-color: #F4F0EC;
+            }  
+        }
+    }
+}
+

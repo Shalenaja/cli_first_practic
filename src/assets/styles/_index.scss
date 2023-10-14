@@ -1,0 +1,179 @@
+
+.content {
+    @include flex-col-center;
+    gap: 96px;
+
+    &__banner {
+        height: 758px;
+        background-image: url(@/assets/img/header_banner_img.png);
+        border-radius: 62px;
+        &_info {
+            width: 36%;
+            margin-left: 66px;
+            margin-top: 212px;
+            @include flex-col-start;
+            gap: 20px;
+        
+            &_title {
+                color: $colorTitle;
+                font-family: DM Serif Display;
+                font-size: 65px;
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            &_text {
+                color: $colorText;               
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            &_button {
+                width: 50.7%;
+                height: 75px;
+                border: 1px transparent;
+                border-radius: 18px;
+                background: $colorTitle;     
+                color: $color_Back;
+                text-align: center;          
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                padding: 26px, 48px;
+                & svg {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    &__layouts {
+      
+        &_title {
+            color: $colorTitle;
+            text-align: center;
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    
+        &_text {
+            width: 61.4%;
+            margin-left: 19.3%;
+            margin-top: 8px;
+            margin-bottom: 93px;
+            color: $colorText;
+            text-align: center;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        &_block {
+            display: grid;
+            grid-template-columns: repeat(2, 45.6%);
+            gap: 8.8%;
+            row-gap: 56px;
+            &_item {
+                @include flex-col-start;
+
+                &_title {
+                    margin-top: 24px;
+                    color: $colorTitle;
+                    font-family: DM Serif Display;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 400;         
+                    letter-spacing: 0.5px;
+                }
+
+                &_text {
+                    color: $colorText;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;                  
+                    letter-spacing: 0.22px;
+                }
+            }
+        }
+    }
+}
+
+.project-info {
+    margin-top: 96px;
+    margin-bottom: 96px;
+    background-color: #F4F0EC;
+    padding-top: 151px;
+    padding-bottom: 151px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+
+        &_item {
+            @include flex-col-center;
+            gap: 16px;
+
+            &_amount {
+                text-align: center;
+                color: #CDA274;
+                font-family: DM Serif Display;
+                font-size: 85px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 1.7px;              
+            }
+
+            &_text {
+                color: $colorText;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.22px;   
+            }
+        }
+
+        &_item_line{  
+            border-right: 1px solid #CDA274;
+        }       
+    } 
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        margin-bottom: 12px;
+        color: $colorTitle;
+        text-align: center;
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400; 
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        margin-bottom: 52px;
+        width: 67.6%;
+        color: $colorText;
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.22px;
+    }
+
+    &__block {
+        margin-bottom: 96px;
+        display: grid;
+        grid-template-columns: repeat(3, 31.8%);
+        gap: 2.3%;
+    }
+}
+

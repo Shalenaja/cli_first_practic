@@ -1,0 +1,171 @@
+
+.blog-details-banner {
+    margin-bottom: 200px;    
+    background-image: url(@/assets/img/Blog-details-banner.jpg);
+    height: 364px;
+    background-size: cover;
+}
+
+.blog-details-content {
+    margin-bottom: 96px;
+    display: flex;
+    flex-direction: row;
+    gap: 52px;
+
+    &__info {
+        @include flex-col-start;   
+        width: 65.7%;
+
+        &_subtitle {
+            margin-bottom: 20px;
+            color: $colorTitle;
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        &_img {
+            margin-bottom: 35px;
+        }
+
+        &_text {
+            color: $colorText;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.22px;
+            display: block;
+            white-space: pre-wrap;
+            width: 800px;
+
+            &_list {
+                margin-top: 24px;
+                margin-bottom: 44px;
+        
+                & li {
+                    color: $colorText;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 400;
+                    letter-spacing: 0.22px;                    
+                    margin-bottom: 32px;
+                }
+            }
+
+            &_paragraph {
+                color: #CDA274;
+                font-family: DM Serif Display;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+                margin-right: 14px;
+            }
+        
+        }
+
+        &_link {
+            @include flex-spbt;
+            margin-top: 11px;
+            margin-bottom: 48px;
+        }
+
+        &_data {
+            color: $colorText;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.16px;
+            text-transform: capitalize;
+        }
+
+        &_menu-details { 
+            width: 250px; 
+            & ul {
+                @include flex-start-center;
+                gap: 20px;
+                color: $colorText;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: 0.16px;
+                text-transform: capitalize;
+                
+            }
+
+            & li {
+                position: relative;
+            
+                &:not(:last-child)::after {
+                        content: "/";
+                        position: absolute;
+                        left: 50px;
+                    }
+                }
+        }
+
+        &_box-adt {
+            height: 267px;
+            width: 100%;
+            border-radius: 50px;
+            background: #F4F0EC;
+            @include flex-col-center;
+            align-items: center;
+            padding-top: 20px;
+            margin-top: 35px;
+            margin-bottom: 27px;
+
+            &_title {
+                width: 355px;
+                color: #CDA274;
+                text-align: center;
+                font-family: DM Serif Display;
+                font-size: 25px;
+                font-style: italic;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
+    &__button-box {
+        height: 150px;
+        width: 31%;
+        @include flex-start-center;
+        flex-wrap: wrap;
+        gap: 11px;
+
+        &_title {
+            display: block;
+            width: 100%;
+            color: $colorTitle;
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        &_button {           
+            padding: 12px 30px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            background-color: #F4F0EC;
+            color: $colorTitle;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.36px;
+
+            &:hover {
+                background-color: #292F36;
+                color: $color_Back;
+            }
+        }
+    }
+}
+    
+        
