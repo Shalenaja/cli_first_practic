@@ -1,31 +1,23 @@
-<template>
-    <!DOCTYPE html>
-<html lang="en">
+<template>    
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
 </head>
-<body>
-    <div class="box-content">
-        <HeaderComponent/>
-        <div class="blog-details-banner center"></div>    
-            <div class="blog-details-content center">
-                <component :is="currentTabComponent" class="tab"></component>
-                <div class="blog-details-content__button-box">
-                    <h3 class="blog-details-content__button-box_title">Tags</h3>
-                    <button v-for="tab in tabs" :key="tab.id" @click="currentTab = tab" class="blog-details-content__button-box_button">{{ tab }}</button>
-                </div>
-            </div>
-        <FooterComponent/>       
+<div class="box-content">
+    <HeaderComponent/>
+    <div class="blog-details-banner center"></div>    
+    <div class="blog-details-content center">
+        <component :is="currentTabComponent" class="tab"></component>
+        <div class="blog-details-content__button-box">
+            <h3 class="blog-details-content__button-box_title">Tags</h3>
+            <button v-for="tab in tabs" :key="tab.id" @click="currentTab = tab" class="blog-details-content__button-box_button">{{ tab }}</button>
+        </div>
     </div>
-</body>
-</html>    
+    <FooterComponent/>       
+</div>
 </template>
 
 <script>
