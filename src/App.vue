@@ -3,15 +3,17 @@
   <IndexComponent/>
   <BlogComponent/>
   <BlogDetailsComponent/>
+  <ProjectComponent/>
 </template>
 
 <script>
 import IndexComponent from './components/IndexComponent.vue';
 import BlogComponent from './components/BlogComponent.vue';
 import BlogDetailsComponent from './components/BlogDetailsComponent';
+import ProjectComponent from './components/ProjectComponent';
 
   export default {
-   components: {IndexComponent, BlogComponent, BlogDetailsComponent},
+   components: {IndexComponent, BlogComponent, BlogDetailsComponent, ProjectComponent},
   };
 </script>
 

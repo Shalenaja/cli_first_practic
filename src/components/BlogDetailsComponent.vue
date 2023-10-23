@@ -1,11 +1,4 @@
-<template>    
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
-    
-</head>
+<template>
 <div class="box-content">
     <HeaderComponent/>
     <div class="blog-details-banner center"></div>    

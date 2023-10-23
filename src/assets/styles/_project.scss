@@ -1,0 +1,214 @@
+.project-banner {    
+    margin-bottom: 200px;    
+    background-image: url(@/assets/img/project-banner.png);
+    height: 358px;
+    background-size: cover;
+    position: relative;
+    &__link {
+        position: absolute;
+        top: 180px;
+        margin-left: 348px;      
+        background-color: $color_Back;
+        border-top-left-radius: 37px;
+        border-top-right-radius: 37px;
+        height: 178px;
+        padding: 41px 125px;
+
+        &_title {
+            color: $colorTitle;
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        & ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            color: $colorText;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; 
+            letter-spacing: 0.22px;
+            position: relative;
+
+            &::after {
+                content: '/';
+                position: absolute;
+                left: 115px;
+            }
+        }
+    }  
+}
+
+.project-content {
+    margin-bottom: 200px;
+    @include flex-col-center;
+    align-items: center;
+
+    &__kind-box {
+        height: 77px;
+        width: 74.6%;
+        @include flex-spbt;
+        border: 1px solid #CDA274;
+        border-radius: 18px;
+
+        &_button {
+            background-color: $color_Back; 
+            color: $colorTitle; 
+            padding: 26px 66px;
+            border-radius: 18px;
+            border: 1px solid transparent;
+            color: $colorTitle;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 0.36px;
+            
+            &:hover {
+                background-color: #CDA274;
+                color: $color_Back; 
+            }
+        }
+    }
+
+    &__item-box {
+        margin-top: 61px;
+        margin-bottom: 61px;       
+        display: grid;
+        column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+
+
+    &__scroll-page {
+        width: 22.4%;
+        height: 52px;
+        margin-left: 464px;
+        margin-right: 464px;
+        @include flex-start-center;
+        gap: 20px;
+
+        &_button {              
+            background-color: $color_Back;
+            border-radius: 50px;
+            border: 1px solid #CDA274;
+            width: 52px;
+            height: 52px;
+
+            &:last-child {
+                border: 1px solid transparent;
+            }
+            
+            &:hover svg {
+                fill: #F4F0EC;
+            } 
+            &:hover {
+                background-color: #F4F0EC;
+            }  
+        }
+    }
+}
+
+.project-item { 
+    width: 584px; 
+    @include flex-col-start;
+    position: relative;
+
+    &__img {
+        width: 582px;
+        display: block;
+    }
+ 
+    &__info {
+        @include flex-spbt;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        height: 70px;
+
+        &_left {
+            @include flex-col-start;
+        }
+        
+        &_title {
+            color: $colorTitle;
+            font-family: DM Serif Display;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        &_link {
+           display: flex;
+           gap: 20px;
+           width: 37%px;
+           color: $colorText;
+           font-size: 22px;
+           font-style: normal;
+           font-weight: 400;
+           line-height: 150%;
+           letter-spacing: 0.22px;
+           position: relative;
+           
+           &::before {
+            content: '/';
+            position: absolute;
+            left: 60px;
+           }
+        }
+
+        &_button {
+            border: 1px solid transparent;
+            border-radius: 50px;
+            &:hover  {
+                background-color: $color_Back;
+            }
+            & svg:hover circle {
+                fill: $color_Back;
+            }
+        }
+    }
+    
+    .star {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    
+        & path{
+            fill: transparent;
+            stroke: #F4F0EC;
+        }
+    }
+}
+
+
+.project-item:nth-child(n) {   
+    grid-row: 1 / span 3;
+}
+.project-item:nth-child(2) {
+    grid-row: 1 / span 2;
+}
+.project-item:nth-child(3) {
+    grid-row: 4 / span 2;
+}
+.project-item:nth-child(4) {
+    grid-row: 3 / span 3;
+}
+.project-item:nth-child(5) {
+    grid-row: 6 / span 3;
+}
+.project-item:nth-child(6) {
+    grid-row: 6 / span 2;
+}
+.project-item:nth-child(7) {
+    grid-row: 9 / span 2;
+}
+.project-item:nth-child(8) {
+    grid-row: 8 / span 2;
+}

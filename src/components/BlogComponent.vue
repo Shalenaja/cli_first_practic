@@ -1,10 +1,4 @@
 <template>
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
-</head>
 <div class="box-content">
     <HeaderComponent/>
     <div class="blog-content">
@@ -12,8 +6,8 @@
                 <div class="blog-content__banner_link">
                     <h1 class="blog-content__banner_link_title">Articles & News</h1>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="IndexComponent.vue">Home</a></li>
+                        <li><a href="BlogComponent.vue">Blog</a></li>
                     </ul>
                 </div>
             </div>
