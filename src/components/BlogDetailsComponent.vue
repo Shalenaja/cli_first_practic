@@ -25,6 +25,7 @@ import ArticleKitchenPlanning from '@/components/ArticleKitchenPlanning.vue';
 
 
     export default {
+        name: 'BlogDetailsComponent',  
         data() {
             return {
                 tabs: ['Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning', 'Bedroom'],

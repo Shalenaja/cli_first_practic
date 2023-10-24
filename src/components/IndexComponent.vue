@@ -83,6 +83,7 @@ import FooterComponent from './FooterComponent.vue';
 import NewsCardComponent from './NewsCardComponent.vue';
 
 export default {
+    name: 'IndexComponent',  
     data() {
         return {
             array: [

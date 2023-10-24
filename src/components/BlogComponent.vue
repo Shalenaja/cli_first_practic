@@ -61,6 +61,7 @@ import FooterComponent from './FooterComponent.vue';
 import NewsCardComponent from './NewsCardComponent.vue';
 
     export default {
+        name: 'BlogComponent',        
         data() {
         return {
             array: [

@@ -40,6 +40,7 @@ import KitchanProjects from '@/components/KitchanProjects.vue';
 import LivingAreaProjects from '@/components/LivingAreaProjects.vue';
 
     export default {
+        name: 'ProjectComponent',  
         data() {
             return {
                 btnArray: ['Bathroom', 'Bed Room', 'Kitchan', 'Living Area'],

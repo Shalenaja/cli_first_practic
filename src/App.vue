@@ -4,6 +4,7 @@
   <BlogComponent/>
   <BlogDetailsComponent/>
   <ProjectComponent/>
+  <ProjectDetailsComponent/>
 </template>
 
 <script>
@@ -11,9 +12,10 @@ import IndexComponent from './components/IndexComponent.vue';
 import BlogComponent from './components/BlogComponent.vue';
 import BlogDetailsComponent from './components/BlogDetailsComponent';
 import ProjectComponent from './components/ProjectComponent';
+import ProjectDetailsComponent from './components/ProjectDetailsComponent.vue';
 
   export default {
-   components: {IndexComponent, BlogComponent, BlogDetailsComponent, ProjectComponent},
+   components: { IndexComponent, BlogComponent, BlogDetailsComponent, ProjectComponent, ProjectDetailsComponent },
   };
 </script>
 
