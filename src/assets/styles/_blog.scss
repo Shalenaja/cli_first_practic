@@ -130,33 +130,10 @@
         display: grid;
         grid-template-columns: repeat(3, 31.8%);
         gap: 2.3%;
-    }
-
-    &__scroll-page {
-        width: 22.4%;
-        height: 52px;        
-        margin-left: 464px;
-        @include flex-start-center;
-        gap: 20px;
-
-        &_button {              
-            background-color: $color_Back;
-            border-radius: 50px;
-            border: 1px solid #CDA274;
-            width: 52px;
-            height: 52px;
-
-            &:last-child {
-                border: 1px solid transparent;
-            }
-            
-            &:hover svg {
-                fill: #F4F0EC;
-            } 
-            &:hover {
-                background-color: #F4F0EC;
-            }  
-        }
-    }
+    }   
 }
 
+.scroll-box {
+    margin-left: 464px;
+    margin-right: 464px;
+}

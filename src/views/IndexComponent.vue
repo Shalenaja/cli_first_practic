@@ -1,10 +1,4 @@
 <template> 
-<head>
-<!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css">  -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet"> -->
-</head> 
 <div class="box-content">
 <HeaderComponent/>
     <div class="content center">
@@ -78,23 +72,35 @@
 </template>
   
 <script>
-import HeaderComponent from './HeaderComponent.vue';
-import FooterComponent from './FooterComponent.vue';
-import NewsCardComponent from './NewsCardComponent.vue';
+import { useHead } from '@vueuse/head';
+import HeaderComponent from '@/components/HeaderComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
+import NewsCardComponent from '@/components/NewsCardComponent.vue';
 
 export default {
-    name: 'IndexComponent',  
+    name: 'IndexComponent', 
+    components: { HeaderComponent, FooterComponent, NewsCardComponent },
+    setup() {
+        useHead ({
+            title:
+            'Project furniture studio in VUE/CLI!',
+            meta: [
+                {
+                name: 'IndexComponent',
+                content: 'Дизайн интерьера',
+                }
+            ]
+        });
+    },
     data() {
         return {
             array: [
                 { id: '1', img: require('@/assets/img/news-item__img_1.jpg'), heading: 'Kitchan Design', title: 'Let’s Get Solution For Building Construction Work', data: '26 December,2022'},
                 { id: '2', img: require('@/assets/img/news-item__img_2.jpg'), heading: 'Living Design', title: 'Low Cost Latest Invented Interior Designing   Ideas.', data: '22 December,2022'},
-                { id: '3', img: require('@/assets/img/news-item__img_3.jpg'), heading: 'Interior Design', title: 'Best For Any Office & Business Interior Solution', data: '25 December,2022'}, ],
-            }
-        },
-    components: { HeaderComponent, FooterComponent, NewsCardComponent }
+                { id: '3', img: require('@/assets/img/news-item__img_3.jpg'), heading: 'Interior Design', title: 'Best For Any Office & Business Interior Solution', data: '25 December,2022'}, 
+            ],
+        }
+    },
 };
 </script>
 
-<style lang="scss" scoped>
-</style> 

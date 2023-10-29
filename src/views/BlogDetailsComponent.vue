@@ -14,8 +14,9 @@
 </template>
 
 <script>
-import HeaderComponent from './HeaderComponent.vue';
-import FooterComponent from './FooterComponent.vue';
+import { useHead } from '@vueuse/head';
+import HeaderComponent from '@/components/HeaderComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 import ArticleKitchen from '@/components/ArticleKitchen.vue';
 import ArticleBedroom from '@/components/ArticleBedroom.vue';
@@ -25,32 +26,39 @@ import ArticleKitchenPlanning from '@/components/ArticleKitchenPlanning.vue';
 
 
     export default {
-        name: 'BlogDetailsComponent',  
+        name: 'BlogDetailsComponent',
+        components: {
+            HeaderComponent,
+            FooterComponent,
+            'component-kitchen': ArticleKitchen,
+            'component-bedroom': ArticleBedroom,
+            'component-building': ArticleBuilding,
+            'component-architecture': ArticleArchitecture,
+            'component-kitchen planning': ArticleKitchenPlanning,   
+        },
+        setup() {
+            useHead ({
+                title:
+                'Project furniture studio in VUE/CLI!',
+                meta: [
+                    {
+                    name: 'IndexComponent',
+                    content: 'Статьи дизайн интерьера',
+                    }
+                ]
+            });
+        },     
         data() {
             return {
                 tabs: ['Kitchen', 'Bedroom', 'Building', 'Architecture', 'Kitchen Planning', 'Bedroom'],
                 currentTab: 'Kitchen',
             }
         },
-
         computed: {
             currentTabComponent() {
             this.currentTab = this.currentTab.toLowerCase();                  
             return `component-${this.currentTab}`
             }
         },  
-
-        components: {
-    HeaderComponent,
-    FooterComponent,
-    'component-kitchen': ArticleKitchen,
-    'component-bedroom': ArticleBedroom,
-    'component-building': ArticleBuilding,
-    'component-architecture': ArticleArchitecture,
-    'component-kitchen planning': ArticleKitchenPlanning,   
-}         
     }      
 </script>
-
-<style lang="scss" scoped>
-</style>

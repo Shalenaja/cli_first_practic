@@ -58,7 +58,7 @@
             }
 
             &_paragraph {
-                color: #CDA274;
+                color: $colorSite;
                 font-family: DM Serif Display;
                 font-size: 20px;
                 font-style: normal;
@@ -122,7 +122,7 @@
 
             &_title {
                 width: 355px;
-                color: #CDA274;
+                color: $colorSite;
                 text-align: center;
                 font-family: DM Serif Display;
                 font-size: 25px;

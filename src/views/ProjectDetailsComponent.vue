@@ -17,23 +17,35 @@
 </template>
 
 <script>
-import HeaderComponent from './HeaderComponent.vue';
-import FooterComponent from './FooterComponent.vue';
+import { useHead } from '@vueuse/head';
+import HeaderComponent from '@/components/HeaderComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 import Slider from '@/components/SliderComponent.vue';
-
 import { mapState } from 'vuex';
 
     export default {
-        name: 'ProjectDetailsComponent',  
-        computed: {
-            ...mapState(['title', 'text1', 'text2'])
-        },
+        name: 'ProjectDetailsComponent', 
         components: { 
             HeaderComponent,
             FooterComponent,
             Slider
-        } 
+        },
+        setup() {
+            useHead ({
+                title:
+                'ProjectComponent',
+                meta: [
+                    {
+                    name: 'ProjectComponent',
+                    content: 'Проекты дизайн интерьера',
+                    }
+                ]
+            });
+        }, 
+        computed: {
+            ...mapState(['title', 'text1', 'text2'])
+        },
     }
 </script>
 

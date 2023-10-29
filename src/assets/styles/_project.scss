@@ -53,7 +53,7 @@
         height: 77px;
         width: 74.6%;
         @include flex-spbt;
-        border: 1px solid #CDA274;
+        border: 1px solid $colorSite;
         border-radius: 18px;
 
         &_button {
@@ -70,7 +70,7 @@
             letter-spacing: 0.36px;
             
             &:hover {
-                background-color: #CDA274;
+                background-color: $colorSite;
                 color: $color_Back; 
             }
         }
@@ -78,11 +78,13 @@
 
     &__item-box {
         margin-top: 61px;
-        margin-bottom: 61px;       
-        display: grid;
-        column-gap: 2rem;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(10, 1fr);
+        margin-bottom: 61px;  
+
+        // Masonry!2-й вариант - grid:     
+        // display: grid;    
+        // column-gap: 2rem;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(10, 1fr);
     }
 
 
@@ -97,7 +99,7 @@
         &_button {              
             background-color: $color_Back;
             border-radius: 50px;
-            border: 1px solid #CDA274;
+            border: 1px solid $colorSite;
             width: 52px;
             height: 52px;
 
@@ -187,28 +189,28 @@
     }
 }
 
-
-.project-item:nth-child(n) {   
-    grid-row: 1 / span 3;
-}
-.project-item:nth-child(2) {
-    grid-row: 1 / span 2;
-}
-.project-item:nth-child(3) {
-    grid-row: 4 / span 2;
-}
-.project-item:nth-child(4) {
-    grid-row: 3 / span 3;
-}
-.project-item:nth-child(5) {
-    grid-row: 6 / span 3;
-}
-.project-item:nth-child(6) {
-    grid-row: 6 / span 2;
-}
-.project-item:nth-child(7) {
-    grid-row: 9 / span 2;
-}
-.project-item:nth-child(8) {
-    grid-row: 8 / span 2;
-}
+// Masonry!2-й вариант - grid:   
+// .project-item:nth-child(n) {   
+//     grid-row: 1 / span 3;
+// }
+// .project-item:nth-child(2) {
+//     grid-row: 1 / span 2;
+// }
+// .project-item:nth-child(3) {
+//     grid-row: 4 / span 2;
+// }
+// .project-item:nth-child(4) {
+//     grid-row: 3 / span 3;
+// }
+// .project-item:nth-child(5) {
+//     grid-row: 6 / span 3;
+// }
+// .project-item:nth-child(6) {
+//     grid-row: 6 / span 2;
+// }
+// .project-item:nth-child(7) {
+//     grid-row: 9 / span 2;
+// }
+// .project-item:nth-child(8) {
+//     grid-row: 8 / span 2;
+// }

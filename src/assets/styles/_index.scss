@@ -123,7 +123,7 @@
 
             &_amount {
                 text-align: center;
-                color: #CDA274;
+                color: $colorSite;
                 font-family: DM Serif Display;
                 font-size: 85px;
                 font-style: normal;
@@ -141,7 +141,7 @@
         }
 
         &_item_line{  
-            border-right: 1px solid #CDA274;
+            border-right: 1px solid $colorSite;
         }       
     } 
 }
